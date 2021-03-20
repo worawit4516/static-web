@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: static-dev-web
-  namespace: student82-static-dev
+  name: static-web
+  namespace: student82
   labels:
-    app: static-dev-web
+    app: static-web
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: static-dev-web
+      app: static-web
   template:
     metadata:
       labels:
-        app: static-dev-web
+        app: static-web
     spec:
       containers:
-      - name: static-dev-web
+      - name: static-web
         image: ghcr.io/worawit4516/static-web:dev
         imagePullPolicy: Always
         ports:

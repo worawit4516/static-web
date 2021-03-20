@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: static-dev-web
-  namespace: student82-static-dev
+  name: static-web
+  namespace: student82
 spec:
   type: ClusterIP
   ports:
   - port: 80
   selector:
-    app: static-dev-web
+    app: static-web
